@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="images/Bus.png" sizes="16x16">
+  <title>THE GO BUS - Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Styling/Team.css">
+  <link rel="stylesheet" href="Styling/NavBar.css">
+  <link rel="stylesheet" href="Styling/load.css">
+  <link rel="stylesheet" href="Styling/login.css">
+</head>
+
+<body onload="Load()" style="margin:0;">
+    <div  id="loader"></div>
+    <div style="display:none;" id="loadDiv" class="animate-bottom">      
+    
+        <header>
+          <a href="Home.html" style="font-size: 40px;" class="logo"> THE <span>GO</span> BUS</a>
+            <ul>
+              <li><a href="Home.html">Home</a></li>
+              <li><a href="Schedule.html">Schedule</a></li>
+              <li><a href="Fares.html">Fares</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a class="active" href="Contact.php">Contact Us</a></li> 
+              <li><a href="OurTeam.html">OurTeam</a></li>
+              <li>  <button style="margin-right: -90px" onclick="document.getElementById('id01').style.display='block'">Login</button><li>
+            </ul>
+        </header>
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="LoginConection.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="images/unknown.jpg" alt="unknown" class="avatar">
+            </div>
+            <div class="Formcontainer">
+              <label for="UName" style="margin-left: 43%; font-size: 20px"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="UName" style="margin-left: 28%; width: 40%" required>
+              <br>
+              <label for="psw" style="margin-left: 43%; font-size: 20px"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="Password" style="margin-left: 28%; width: 44% ;" required>
+              <br><br>
+              <button type="submit" style="margin-left: 40%;">Login</button>
+            </div>
+          </form>
+        </div>
+          <script>
+            var modal = document.getElementById('id01');
+            window.onclick = function(event) 
+            {
+              if (event.target == modal) 
+              {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+        <div style="background-color: black">
+            <section class="banner2"></section>
+            <script type="text/javascript">
+              window.addEventListener("scroll",function()
+              {
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY>0)
+              });
+            </script>
+        </div>
+        <div style="background-color: #EEEEEE">
+          <div class="Cmargin">    
+            <h1 style="margin-top: 0px;margin-left: 35% ; font-size: 55px; color: black">
+              Contact <span>Us</span>
+            </h1>
+            <div class="container">
+              <form action="Contact.php" method="post" onsubmit="sub()">
+                <table>
+                  <tr>
+                    <b>You can contact us any way that is convenient for you. We are available 24/7 via email. You can also use a quick contact form below or visit our office personally.</b><br><br>
+                  </tr>
+                  <tr>
+                    <th><label for="First_Name">FIRST NAME</label></th>
+                    <th><label for="Last_Name">LAST NAME</label></th>
+                  </tr>
+                  <tr>
+                    <td><input type="text" id="First_Name" name="First_Name" autocomplete="off" required></td>
+                    <td><input type="text" id="Last_Name" name="Last_Name" autocomplete="off" required></td>
+                  </tr>
+                  <tr>
+                    <th><label for="Email">EMAIL </label></th>
+                    <th><label for="Number">MOBILE NUMBER </label></th>
+                  </tr>
+                  <tr>
+                    <td><input type="email" id="Email" name="Email" autocomplete="off" placeholder="someone@example.com" required></td>
+                    <td><input type="number" id="Number" name="Number" autocomplete="off" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="03*********" required></td>
+                  </tr>
+                  <br>
+                  <tr>
+                     <th> <label for="Message">Message:</label></th>
+                  </tr>
+                   <tr>
+                     <td><textarea class="form-control" rows="50" id="Message" name="Message" placeholder="Short Message" required></textarea></td>
+                  </tr>
+                  <td></td>
+                    <td>
+                      <input type="Reset" value="Reset">
+                    </td>
+                    <td>
+                      <input type="submit" name="submit" value="Submit"> 
+                      <?php
+                          include "Contactus.php";
+                      ?>              
+                    </td>
+                </table>
+              </form>
+              <script>
+                  function sub() 
+                  {
+                    alert("Your Message was submitted");
+                  }
+                </script>
+            </div>
+          </div>
+          <br><br><br><br><br><br>
+        </div>
+          <div class="footer">
+            Copyright 2021, The Go Bus | Developed By Muhammad Furqan, Talha & Zeeshan Ahmed| All Rights Reserved
+          </div>
+    </div>
+    <script>
+    var myVar;
+    function Load() 
+    {
+      myVar = setTimeout(showPage, 1000);
+    }
+    function showPage() 
+    {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadDiv").style.display = "block";
+    }
+  </script>
+    <script>
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+  </script>
+</body>
+</html>

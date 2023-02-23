@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="images/Bus.png" sizes="16x16">
+  <title>THE GO BUS - About Us</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Styling/Team.css">
+  <link rel="stylesheet" href="Styling/NavBar.css">
+  <link rel="stylesheet" href="Styling/load.css">
+  <link rel="stylesheet" href="Styling/login.css">
+</head>
+<body onload="Load()" style="margin:0;">
+    <div  id="loader"></div>    
+    <div style="display:none;" id="loadDiv" class="animate-bottom"> 
+        <header>
+          <a href="Home..html" style="font-size: 40px;" class="logo"> THE <span>GO</span> BUS</a>
+          <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Schedule.html">Schedule</a></li>
+            <li><a href="Fares.html">Fares</a></li>
+            <li><a class="active" href="About.html">About Us</a></li> 
+            <li><a href="Contact.php">Contact Us</a></li>
+            <li><a href="OurTeam.html">OurTeam</a></li>
+            <li>  <button style="margin-right: -90px" onclick="document.getElementById('id01').style.display='block'">Login</button><li>
+          </ul>
+        </header>
+        <div id="id01" class="modal">
+          <form class="modal-content animate" action="LoginConection.php" method="post">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+              <img src="images/unknown.jpg" alt="unknown" class="avatar">
+            </div>
+            <div class="Formcontainer">
+              <label for="UName" style="margin-left: 43%; font-size: 20px"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="UName" style="margin-left: 28%; width: 40%" required>
+              <br>
+              <label for="psw" style="margin-left: 43%; font-size: 20px"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="Password" style="margin-left: 28%; width: 44% ;" required>
+              <br><br>
+              <button type="submit" style="margin-left: 40%;">Login</button>
+            </div>
+          </form>
+        </div>
+          <script>
+            var modal = document.getElementById('id01');
+            window.onclick = function(event) 
+            {
+              if (event.target == modal) 
+              {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+        <div style="background-color: black">
+          <section class="banner1"></section>
+            <script type="text/javascript">
+             window.addEventListener("scroll",function()
+             {
+               var header = document.querySelector("header");
+               header.classList.toggle("sticky", window.scrollY>0)
+             });
+            </script>
+        </div>
+        <div style="background-color: #EEEEEE">
+          <div class="margin">    
+              <h1 style="margin-top: 0px;margin-left: 35% ; font-size: 55px; color: black">
+              About <span>Us</span></h1>
+              <h2 class="firstheading">
+                What is The Go Bus?
+              </h2>
+              <p>The Go Bus is a website that provides travelers instant access to the most extensive global network of city-to-city pxses using our bus-booking platform. Discover thousands of destinations around the country and easily book your next bus trip online. Whether you’re planning a holiday in the Pakistan with The Go Bus. Book online and pay payment online through your Bank Account.</p>
+              <h2 class="secondheading">
+               Why should you take the bus?
+              </h2>
+              <h3 style="margin-bottom: 10px">Affordable travel</h3>
+              <p>The bus is an excellent low-cost travel choice. On average, you can find the best bus ticket prices by booking in advance; the earlier you book your bus trip generally the cheaper your tickets will be!</p>
+              <h3 style="margin-bottom: 10px; margin-top: 10px">Hassle-free travel</h3>
+              <p class="margin">The bus is one of the easiest modes of transportation for city-to-city travel, enjoy the hassle-free travel experience the bus offers. Its simplicity means that you can pick the best route for your trip and travel at your own pace.
+              <h3 style="margin-bottom: 10px; margin-top: 10px">Sustainability</h3>
+              <p class="margin">Buses have the lowest CO2 emissions of any mode of city-to-city transportation. This makes the bus a very sustainable way to travel! Each time you take the bus instead of flying you are making the planet a greener place.<p>
+             <h2 class="thirdheading">
+               Why use Busbud?
+              </h2>
+              <p class="margin">Book bus travel; anytime, anywhere.
+              <br>
+              Compare the prices and schedules of bus tickets online for your next trip. Customize your own trip. Whether you’re looking for the best price, the shortest travel duration, or a specific route—book intercity bus tickets in one place.</p>
+          </div>
+          <br>
+          <br>
+        <div class="footer">
+          Copyright 2021, The Go Bus | Developed By Muhammad Furqan, Talha & Zeeshan Ahmed| All Rights Reserved
+        </div>
+    </div>
+    <script>
+      var myVar;
+      function Load() 
+      {
+        myVar = setTimeout(showPage, 1000);
+      }
+      function showPage() 
+      {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("loadDiv").style.display = "block";
+      }
+    </script>
+      <script>
+  if ( window.history.replaceState ) {
+    window.history.replaceState( null, null, window.location.href );
+  }
+  </script>
+</body>
+</html>

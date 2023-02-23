@@ -1,0 +1,542 @@
+
+.banner1
+{
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background: url(images/Abg.jpg);
+	background-size: cover;
+	opacity: 0.5;	
+}
+.banner2
+{
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background: url(images/Cbg.jpg);
+	background-size: cover;
+	opacity: 0.5;	
+}
+.banner3
+{
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background: url(images/Sbg.jpg);
+	background-size: cover;
+	opacity: 0.5;
+}
+.banner4
+{
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background: url(images/IMG_8817.jpg);
+	background-size: cover;
+	opacity: 0.5;
+}
+span
+{
+	color: tomato;
+}
+.content
+{
+	text-align: center;
+}
+.mfp-hide
+{
+	display: none;
+}
+textarea
+{
+	resize: none;
+ 	font-size: 17px;
+	width: 400px;
+	height: 105px;
+	padding: 12px;
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+textarea:focus 
+{
+	border: 3px solid #555;
+}
+.footer
+{
+	color: gray;
+	background-color: rgba(6, 12, 34, 0.98);
+	padding: 20px;
+	font-size: 13px;
+	text-align: center;
+	box-shadow: 0px 8px 3px tomato;
+}
+.home_img 
+{
+	background-image: url(../images/bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	opacity: 0.8;
+}
+.main_img 
+{
+	max-width: 250px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+h2.firstheading /*About page*/
+{
+	margin-top: 50px;
+	margin-bottom: 20px;
+	box-shadow: 3px 5px 5px tomato;
+	border-color:  Tomato;
+	border-width:7px;
+	max-width: 276px;
+	border-style: groove;
+	border-radius:15px;
+	padding: 10px;
+}
+h2.secondheading /*About page*/
+{
+	box-shadow: 3px 5px 5px tomato; 
+	border-color:  Tomato;
+	border-width:7px;
+	max-width: 381px;
+	border-style: groove;
+	border-radius:15px;
+	padding: 10px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+h2.thirdheading /*About page*/
+{
+	box-shadow: 3px 5px 5px tomato;
+	border-color:Tomato;
+	border-width:7px;
+	max-width: 244px;
+	border-style: groove;
+	border-radius:15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+div.margin
+{
+	margin-left: 300px;
+	margin-right: 300px;
+	text-align: justify;
+	white-space: wrap;
+	text-justify: inter-word;
+}
+div.Cmargin
+{
+	margin-left: 300px;
+	margin-right: 300px;
+	text-align: justify;
+	height: auto;
+	white-space: wrap;
+	text-justify: inter-word;
+}
+div.Hmargin
+{
+	margin-left: 200px;
+	margin-right: 200px;
+ 	text-align: justify;
+  	white-space: wrap;
+	text-justify: inter-word;
+}
+p
+{
+	font-size: 17px;
+}
+input[type=text]
+{
+	font-size: 17px;
+	width: 200px;
+	height: 0px;
+	padding: 12px;
+	border: 3px solid #ccc;
+	border-radius: 10px;
+	transition: 0.5s;
+}
+input[type=text]:focus 
+{
+	border: 3px solid #555;
+}
+input[type=email]
+{
+	border-radius: 10px;
+	font-size: 17px;
+	width: 230px;
+	height: 3px;
+	padding: 12px;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	transition: 0.5s;
+}
+input[type=email]:focus 
+{
+	border: 3px solid #555;
+}
+input[type=number]
+{
+	border-radius: 10px;
+	font-size: 17px;
+	width: 200px;
+	height: 3px;
+	padding: 12px;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	transition: 0.5s;
+}
+input[type=number]:focus 
+{
+	border: 3px solid #555;
+}
+input[type=password]
+{
+	border-radius: 10px;
+	font-size: 17px;
+	width: 200px;
+	height: 3px;
+	padding: 12px;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	transition: 0.5s;
+}
+input[type=password]:focus 
+{
+	border: 3px solid #555;
+}
+input[type=date]
+{
+	border-radius: 10px;
+	font-size: 17px;
+	width: 200px;
+	height: 3px;
+	padding: 12px;
+	box-sizing: border-box;
+	border: 3px solid #ccc;
+	transition: 0.5s;
+}
+input[type=date]:focus 
+{
+	border: 3px solid #555;
+}
+select 
+{
+	font-size: 17px;
+	width: 200px;
+	padding: 16px 20px;
+	border: 1 px solid black;
+	border-radius: 10px;
+}
+.img_online
+{
+	width: 100%;
+	height: auto;
+	margin:20px; 
+	margin-top: -20px;
+}
+table 
+{
+	font-family: arial, sans-serif;
+	border-collapse: collapse;    
+	width: 700px;
+}
+td, th 
+{
+	text-align: left;
+	padding: 5px;
+}
+.container 
+{
+	border-radius: 5px;
+	background-color: white;
+	padding: 20px;
+}
+input[type=reset] 
+{
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	padding: 12px 20px;
+	border: 2px solid tomato;
+	border-radius: 10px;
+	cursor: pointer;
+	
+}
+input[type=reset]:hover 
+{
+	background-color: tomato;
+	color: white;
+	box-shadow: 0px 10px 25px tomato;
+	transition: .3s;
+}
+input[type=submit] 
+{
+	width: 100px;
+	height: 40px;
+	padding: 15px;
+	background-color: white;
+	color: black;
+	padding: 12px 20px;
+	border: 2px solid tomato;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-left: -100px;
+}
+input[type=submit]:hover 
+{
+	background-color: tomato;
+	color: white;
+	box-shadow: 0px 10px 25px tomato;
+	transition: .3s;
+}
+button
+{
+	margin-right: 270px;
+	margin-top: -5px;
+	width: 150px;
+	height: 35px;
+	padding: 5px;
+	background-color: tomato;
+	color: white;
+	font-size: 15px;
+	border: 2px solid tomato;
+	border-radius: 10px;
+	cursor: pointer;
+  
+}
+button:hover 
+{
+	background-color: tomato;
+	color: white;
+	box-shadow: 0px 10px 25px tomato;
+	transition: .3s;
+}
+#myInput 
+{
+	background-image: url('/css/searchicon.png');
+	background-position: 10px 12px;
+	background-repeat: no-repeat;
+	width: 50%;
+	font-size: 16px;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
+}
+#myUL 
+{
+	list-style-type: none;
+ 	padding: 0;
+	margin: 0;
+}
+#myUL li a 	
+{
+	border: 1px solid #ddd;
+	margin-top: -1px; 
+	background-color: #f6f6f6;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+	display: block;
+}
+#myUL li a:hover:not(.header) 
+{
+	background-color: #eee;
+}
+span.a
+{
+	color: black;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+@media only screen and (max-width: 1400px) 
+{
+	div.margin
+	{
+		margin-left: 200px;
+		margin-right:200px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left: 200px;
+		margin-right: 270px;
+		text-align: justify;
+		height: auto;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Hmargin
+	{
+		margin-left: 200px;
+		margin-right: 100px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+}
+@media only screen and (max-width: 1300px) 
+{
+	div.Hmargin
+	{
+		margin-left: 100px;
+		margin-right: 100px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left: 100px;
+		margin-right: 270px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.margin
+	{
+		margin-left: 200px;
+		margin-right:200px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+}
+@media only screen and (max-width: 1200px) 
+{
+	div.margin
+	{
+		margin-left: 200px;
+		margin-right:200px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Hmargin
+	{
+		margin-left: 50px;
+		margin-right: 50px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left: 100px;
+		margin-right: 190px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+}
+@media only screen and (max-width: 1024px) 
+{
+	div.margin
+	{
+		margin-left: 150px;
+		margin-right:150px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Hmargin
+	{
+		margin-left:50px;
+		margin-right:50px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left:50px;
+		margin-right:50px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+}
+@media only screen and (max-width: 800px) 
+{
+	div.margin
+	{
+		margin-left: 150px;
+		margin-right:150px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Hmargin
+	{
+		margin-left:50px;
+		margin-right:50px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left:0px;
+		margin-right:-100px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	.row
+	{
+		flex-direction: column;
+	}
+	
+}
+@media only screen and (max-width: 375px) 
+{
+	div.margin
+	{
+		margin-left: 0px;
+		margin-right:0px;
+		text-align: justify;
+		white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Cmargin
+	{
+		margin-left:0px;
+		margin-right:-500px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	div.Hmargin
+	{
+		margin-left:0px;
+		margin-right:0px;
+	 	text-align: justify;
+	  	white-space: wrap;
+		text-justify: inter-word;
+	}
+	body
+	{
+		flex-direction: column;
+	}
+}

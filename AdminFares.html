@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="images/Bus.png" sizes="16x16">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE GO BUS - Admin Fares</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Styling/NavBar.css">
+  <link rel="stylesheet" href="Styling/load.css">
+  <link rel="stylesheet" href="Styling/Team.css">
+
+  <style>
+		.banner4
+		{
+			position: relative;
+			width: 100%;
+			height: 70vh;
+			background: url(images/Fbg.jpg);
+			background-size: cover;
+			opacity: 0.5;
+		}
+	  	#myInput 
+	  	{
+			background-image: url('/css/searchicon.png');
+			background-position: 10px 10px;
+			background-repeat: no-repeat;
+			width: 100%;
+			font-size: 16px;
+			padding: 12px 20px 12px 40px;
+			border: 1px solid #ddd;
+			margin-bottom: 12px;
+		}
+		#myTable 
+		{
+			border-collapse: collapse;
+			width: 100%;
+			border: 1px solid #ddd;
+			font-size: 18px;
+		}
+		#myTable th, #myTable td 
+		{
+	  		text-align: left;
+	  		padding: 12px;
+		}
+		#myTable tr 
+		{
+	  		border-bottom: 1px solid #ddd;
+		}
+		#myTable tr.header, #myTable tr:hover 
+		{
+	  		background-color: #f1f1f1;
+		}
+	</style>
+
+</head>
+<body onload="Load()" style="margin:0;">
+    <div  id="loader"></div>
+    <div style="display:none;" id="loadDiv" class="animate-bottom">
+	  	<header>
+	            <a href="AdminHome.php" style="font-size: 40px;" class="logo"> THE <span>GO</span> BUS</a>
+		          <ul>
+		            <li><a href="AdminHome.php">Home</a></li>
+		            <li><a href="AdminSchedule.html">Schedule</a></li>
+		            <li><a class="active" href="AdminFares.html">Fares</a></li> 
+		            <li><a href="Datadisplay.php">Register Customers</a></li>
+		            <li><a href="DisplayContactUs.php">Customer Feedback</a></li>                      	
+		    		<li><button style="margin-right: -25px"><a href="Home.html">LOG OUT</a></button><li>
+		          </ul>
+	  	</header>
+	  	<div style="background-color: black">
+	    	<section class="banner4"></section>
+	    	  <script type="text/javascript">
+	    	    window.addEventListener("scroll",function()
+	    	    {
+	    	 	    var header = document.querySelector("header");
+	    	    	header.classList.toggle("sticky", window.scrollY>0)
+	    	    });
+	      		</script>
+	  	</div>
+	  	<div style="background-color: #EEEEEE">
+	    	<div class="Cmargin">    
+	    	  <h1 style="margin-top: 0px;margin-left: 35% ; font-size: 55px; color: black">
+	        	<span>Fa</span>res</h1>
+	        	<div class="container">
+	        		<h2>Enter City name to check its Fares:</h2>
+	        		<br>
+	        		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for city name.." title="Type in a name" style="width: 50%">
+	        		<button onclick="Hide()">Check Fares</button>		
+					<div style="display: none;" id="myDIV">
+						<br>
+	        			<br>
+	        			<table id="myTable">
+							<tr class="header">
+								<th style="width:40%;">Leaving From</th>
+								<th style="width:33.33%;">Going to</th>
+								<th style="width:33.33%;">Fares</th>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>FAISALABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>KARACHI</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>ISLAMABAD</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>ABBOTTABAD</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>KARACHI</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>ISLAMABAD</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>FAISALABAD</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>KARACHI</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>ISLAMABAD</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>GUJRANWALA</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>KARACHI</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>ISLAMABAD</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>ISLAMABAD</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>KARACHI</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>KARACHI</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>KARACHI</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>ISLAMABAD</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>LAHORE</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>LAHORE</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>KARACHI</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>LAHORE</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>ISLAMABAD</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>MULTAN</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>MULTAN</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>KARACHI</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>LAHORE</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>MULTAN</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>ISLAMABAD</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>PESHAWAR</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>RAWALPINDI</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>KARACHI</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>LAHORE</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>ISLAMABAD</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>QUETTA</td>
+								<td>FAISALABAD</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>QUETTA</td>
+								<td>MULTAN</td>
+								<td>RS.5000/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>ABBOTTABAD</td>
+								<td>RS.1000/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>LAHORE</td>
+								<td>RS.1500/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>MULTAN</td>
+								<td>RS.2000/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>FAISALABAD</td>
+								<td>RS.2500/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>PESHAWAR</td>
+								<td>RS.3000/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>KARACHI</td>
+								<td>RS.3500/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>ISLAMABAD</td>
+								<td>RS.4000/-</td>
+							</tr>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>GUJRANWALA</td>
+								<td>RS.4500/-</td>
+							<tr>
+								<td>RAWALPINDI</td>
+								<td>QUETTA</td>
+								<td>RS.5000/-</td>
+							</tr>
+
+						</table>
+						<script>
+							function myFunction() 
+							{
+								var input, filter, table, tr, td, i, txtValue;
+								input = document.getElementById("myInput");
+								filter = input.value.toUpperCase();
+								table = document.getElementById("myTable");
+								tr = table.getElementsByTagName("tr");
+								for (i = 0; i < tr.length; i++) 
+								{
+									td = tr[i].getElementsByTagName("td")[0];
+									if (td)
+									{
+										txtValue = td.textContent || td.innerText;
+										if (txtValue.toUpperCase().indexOf(filter) > -1) 
+										{
+											tr[i].style.display = "";
+										} 
+										else 
+										{
+											tr[i].style.display = "none";
+										}
+									}       
+								}
+							}
+						</script>			
+					</div>
+					<script>
+						function Hide() 
+						{
+	  						var x = document.getElementById("myDIV");
+						  	if (x.style.display === "none") 
+						  	{
+						    	x.style.display = "block";
+						  	} 
+						  	else 
+						  	{
+						    	x.style.display = "none";
+						  	}
+						}
+					</script>				
+				</div>
+				<br><br><br><br><br>
+			</div>
+		</div>
+	    <div class="footer">
+			Copyright 2021, The Go Bus | Developed By Muhammad Furqan, Talha & Zeeshan Ahmed| All Rights Reserved
+	    </div>
+	</div>
+	<script>
+    var myVar;
+    function Load() 
+    {
+      myVar = setTimeout(showPage, 1000);
+    }
+    function showPage() 
+    {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("loadDiv").style.display = "block";
+    }
+  </script>
+    <script>
+	if ( window.history.replaceState ) {
+	  window.history.replaceState( null, null, window.location.href );
+	}
+	</script>
+</body>
+</html>
